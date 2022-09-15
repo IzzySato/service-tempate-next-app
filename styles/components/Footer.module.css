@@ -1,0 +1,133 @@
+.footer {
+  background-color: var(--footer-bgd-color);
+  padding: 5% 2% 4% 2%;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: 40% auto;
+}
+
+.infoDiv {
+  display: grid;
+}
+
+.logoNameDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoDiv {
+  text-align: center;
+}
+
+.logoImg {
+  width: 70%
+}
+
+/* style1 (logo included business name) */
+
+.style1 .nameDiv {
+  display: none;
+}
+
+/* style2 (logo does not included business name) */
+
+.style2 .nameDiv {
+  margin-bottom: 2rem;
+}
+
+.addressIcon {
+  color: var(--footer-address-icon-color);
+}
+
+.infoAnchor, .address, .companyName {
+  font-size: 1.5rem;
+}
+
+.address {
+  color: var(--footer-address-color);
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.companyName {
+  color: var(--footer-company-color);
+}
+
+.emailIcon {
+  color: var(--footer-email-icon-color);
+}
+
+.email {
+  color: var(--footer-email-color);
+}
+
+.phoneIcon {
+  color: var(--footer-phone-icon-color);
+}
+
+.phone {
+  color: var(--footer-phone-color);
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .break {
+    display: block;
+  }
+
+  .infoDiv {
+    row-gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+
+  .addressDiv, .infoAnchor {
+    display: grid;
+    grid-template-columns: 12% auto;
+  }
+  
+  .icon {
+    display: block;
+    font-size: 1.4rem;
+    margin-right: 8%;
+  }
+
+  .footer {
+    grid-template-columns: 30% auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .footer {
+    grid-template-columns: 100%;
+    padding: 8% 1% 7% 1%;
+    grid-gap: 1%;
+  }
+
+  .logoDiv {
+    margin-bottom: 2%;
+  }
+
+  .logoImg {
+    width: 70%
+  }
+
+  .phoneDiv {
+    margin-top: 5%;
+  }
+
+  .phoneDiv, .emailDiv, .addressDiv {
+    margin-left: 12%;
+  }
+
+  .infoAnchor, .address, .companyName {
+    font-size: 1.3rem;
+  }
+}

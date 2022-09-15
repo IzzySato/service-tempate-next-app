@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+  margin: 15% 0;
+}
+
+.title {
+  color: var(--testimonial-title-color);
+  font-size: 2rem;
+  margin: 0 0 4% 6%;
+}
+
+.mobile {
+  display: none;
+}
+
+.leftIcon, .rightIcon {
+  position: absolute;
+  top: 50%;
+  font-size: 1.7rem;
+  background-color: var(--testimonial-icon-bgd-color);
+  color: var(--testimonial-icon-color);
+  padding: 0.5rem;
+  display: flex;
+  align-self: center;
+  justify-items: center;
+}
+
+.leftIcon {
+  left: 0;
+}
+
+.rightIcon {
+  right: 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 0 6%;
+}
+
+.list {
+  padding: 5%;
+  background-color: var(--testimonial-card-bgd-color);
+  box-shadow: var(--testimonial-shadow);
+}
+
+.stars {
+  margin-bottom: 3%;
+}
+
+.stars span {
+  font-size: 1.4rem;
+  color: var(--star-color);
+}
+
+.comments {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.name {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 900px) {
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+    margin: 0 0 12% 0;
+  }
+
+  .gridContainer {
+    display: block;
+  }
+
+  .list {
+    width: 90%;
+    margin: 0 auto 3% auto;
+  }
+}

@@ -1,0 +1,73 @@
+
+.serviceLi {
+  margin-bottom: 10%;
+}
+
+.slideDiv {
+  box-shadow: var(--slide-box-shadow);
+}
+
+.serviceName {
+  color: var(--home-service-name);
+  font-size: 1.5rem;
+  margin-bottom: 3%;
+  line-height: 1.8;
+}
+
+.serviceDescriptionP {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 2% 4%;
+}
+
+.serviceInfoDiv {
+  background-color: var(--home-service-name-bgd-color);
+}
+
+.serviceGrid .serviceUl {
+  display: grid;
+  grid-gap: 2rem;
+  margin-bottom: 10%;
+}
+
+.serviceImg {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.evenServices {
+  grid-template-columns: 1fr 1fr;
+}
+
+.oddServices {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.serviceInfoDiv {
+  padding: 2%;
+  background-color: var(--home-service-name-bgd-color);
+}
+
+.slide {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 8%;
+}
+
+.serviceNoDescription .serviceDescriptionP {
+  display: none;
+}
+
+.serviceGrid {
+  display: grid;
+}
+
+@media screen and (max-width: 900px) {
+  .serviceGrid .serviceUl {
+    display: block;
+  }
+}
