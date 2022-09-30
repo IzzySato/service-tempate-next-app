@@ -50,3 +50,15 @@
   TO_EMAIL=[YOUR_EMAIL_ADDRESS]
   FROM_EMAIL=[YOUR_EMAIL_ADDRESS]
 
+  ## refresh nodemailer token
+
+  1. Go to https://developers.google.com/oauthplayground
+  2. select Gmail API v1
+  3. select http://mail.google.com/
+  4. "Input your own scopes" type http://mail.google.com
+  5. right top "configuration" icon, check "Use your own OAuth credentials"
+  6. type client ID and secrents from .env.local
+  7. click Authorise APIs button
+  8. Exchange authorisation code for tokens
+  9. paste the refresh token to .env.local
+

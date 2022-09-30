@@ -5,6 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { sendEmmailClient } from '../pages/api/email/emailClient';
 import { recaptchaClient } from '../pages/api/recaptcha';
 import Select from 'react-select';
+import { insertCustomerClient } from '../pages/api/customer/customerClient';
 
 const Estimate = ({ data: { services, estimateData } }) => {
   const [title, setTitle] = useState('');
@@ -36,8 +37,8 @@ const Estimate = ({ data: { services, estimateData } }) => {
                             .map(({ serviceName }) => 
                                ({ value : serviceName, label: serviceName }));
     setServiceOption(options);
-  }, [
-  ]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const checkRecaptcha = async () => {
     const recaptchaValue = recaptchaRef.current.getValue();
@@ -58,6 +59,15 @@ const Estimate = ({ data: { services, estimateData } }) => {
         address,
         service,
         comments
+        );
+        await insertCustomerClient(
+          fName,
+          lName,
+          email,
+          tel,
+          address,
+          comments,
+          service
         );
         router.push({ pathname: '/message', query: res });
     } else return;
@@ -139,8 +149,8 @@ const Estimate = ({ data: { services, estimateData } }) => {
           <Select isMulti
                   options= { serviceOption }
                   id="select"
-                  onChange={(e) =>
-                    setService(e.value)}/>
+                  onChange={(e) => 
+                    setService(e[0]?.value)}/>
         </fieldset>
         <fieldset className={styles.commentFieldset}>
           <label className={`${styles.label} ${styles.commentLabel}`}
