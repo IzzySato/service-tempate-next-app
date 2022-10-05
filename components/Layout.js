@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import useSWR from 'swr'
+import useSWR from 'swr';
 import Nav from './Nav';
 import Footer from './Footer';
 import ContactHeader from './ContactHeader';

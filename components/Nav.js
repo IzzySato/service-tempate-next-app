@@ -7,24 +7,25 @@ const Nav = () => {
 
   const navFunc = () => 
     (navToggle === 'none') ? setNavToggle('block') : setNavToggle('none');
-    const navData = [
-      {
-        routeName: '/',
-        title: 'HOME'
-      },
-      {
-        routeName: '/about',
-        title: 'ABOUT US'
-      },
-      {
-        routeName: '/service',
-        title: 'SERVICES'
-      },
-      {
-        routeName: '/contact',
-        title: 'CONTACT US'
-      }
-    ];
+
+  const navData = [
+    {
+      routeName: '/',
+      title: 'HOME'
+    },
+    {
+      routeName: '/about',
+      title: 'ABOUT US'
+    },
+    {
+      routeName: '/service',
+      title: 'SERVICES'
+    },
+    {
+      routeName: '/contact',
+      title: 'CONTACT US'
+    }
+  ];
 
   return(
     // hamburger menu for mobile
