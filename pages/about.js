@@ -5,7 +5,7 @@ import { insertStyles } from '../Util/pageUtil';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getAboutData } from '../lib/sanity/data/aboutSanity';
 import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
-import Testimonial from '../components/Testimmonial';
+import Testimonial from '../components/Testimonial';
 import Estimate from '../components/Estimate';
 
 const About = ({
@@ -44,7 +44,7 @@ const About = ({
   ]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} pageWrapper`}>
     {
       image &&
         <div className={styles.aboutImg}

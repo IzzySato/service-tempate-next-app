@@ -5,7 +5,7 @@ import { insertStyles } from '../Util/pageUtil';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getServicePageData } from '../lib/sanity/data/serviceSanity';
 import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
-import Testimonial from '../components/Testimmonial';
+import Testimonial from '../components/Testimonial';
 import ServiceWithImg from '../components/ServiceWithImg';
 import ServiceList from '../components/ServiceList';
 
@@ -41,7 +41,7 @@ const Service = ({
   ]);
 
   return (
-    <div className={`${styles.container} wrapper`}>
+    <div className={`${styles.container} wrapper pageWrapper`}>
       <div className={`${styles.serviceDiv}`}>
         <h1 className={styles.serviceTitle}>{serviceTitle}</h1>
         {/* service list with image */}

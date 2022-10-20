@@ -7,7 +7,7 @@ import { insertStyles } from '../Util/pageUtil';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getContactPageData } from '../lib/sanity/data/contactSanity';
 import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
-import Testimonial from '../components/Testimmonial';
+import Testimonial from '../components/Testimonial';
 
 const Contact = ({ contactPageData,
   businessInfo,
@@ -40,7 +40,7 @@ const Contact = ({ contactPageData,
     services]);
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} pageWrapper`}>
       {
         image &&
         <div className={styles.contactImg}

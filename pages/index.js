@@ -7,7 +7,7 @@ import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getHomeData } from '../lib/sanity/data/homeSanity';
 import { getGlobalData, globalCSSInit, insertStyles } from '../Util/pageUtil';
 import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
-import Testimonial from '../components/Testimmonial';
+import Testimonial from '../components/Testimonial';
 import ServiceWithImg from '../components/ServiceWithImg';
 import ServiceList from '../components/ServiceList';
 
@@ -25,6 +25,7 @@ const Home = ({
   const [estimateC, setEstimateC] = useState(false);
   const [serviceC, setServiceC] = useState(false);
   const [testimonialC, setTestimonialC] = useState(false);
+  const [businessBoxStyle, setBusinessBoxStyle] = useState('');
 
   useEffect(() => {
     const {
@@ -34,9 +35,11 @@ const Home = ({
       estimateComponent,
       serviceComponent,
       testimonialComponent,
-      imageSlide
+      imageSlide,
+      businessInfoBoxStyle
     } = homeData[0];
 
+    setBusinessBoxStyle(businessInfoBoxStyle);
     setHomeImage(homeMainImg);
     setTitle(homeTitle);
     globalCSSInit(globalData);
@@ -53,14 +56,16 @@ const Home = ({
   ]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} pageWrapper`}>
       {
         homeImage &&
-        <div className={styles.imgContainer}
+        <div className={`${styles.imgContainer}`}
           style={{ backgroundImage: `url(${urlFor(homeImage)})` }}>
         </div>
       }
-      <div className={styles.businessInfoContainer}>
+      <div className={(homeImage) ?
+        `${styles.imgContainer} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`
+        : `${styles.noImg} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`}>
         <BusinessInfo data={{ businessInfo: businessInfo[0] }} />
       </div>
       {
