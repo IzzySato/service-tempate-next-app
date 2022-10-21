@@ -272,7 +272,13 @@
         "title": "Message back button text",
         "description": "Message back button text color",
         "rootKey": "--message-back-btn-color",
-        "data": "#FBFBFB"
+        "data": "#5F5B5B"
+      },
+      {
+        "title": "Message font color",
+        "description": "Message font color",
+        "rootKey": "--msg-font-color",
+        "data": "#5F5B5B"
       },
       {
         "title": "Slide box shadow",

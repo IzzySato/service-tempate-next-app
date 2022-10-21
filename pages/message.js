@@ -1,7 +1,6 @@
 import styles from '../styles/pages/Message.module.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { urlFor } from '../sanityConfig';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
@@ -21,13 +20,7 @@ useEffect(() => {
         <div className={styles.imgContainer}>
         {
             logo &&
-            <Image
-            loader={() => urlFor(logo)}
-            src='logo.svg'
-            alt='logo'
-            width={200}
-            height={200}
-          />
+            <img className={styles.logoImg} src={urlFor(logo).url()} />
           }
         </div>
         <div>

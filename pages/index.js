@@ -64,7 +64,7 @@ const Home = ({
         </div>
       }
       <div className={(homeImage) ?
-        `${styles.imgContainer} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`
+        `${styles.withImg} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`
         : `${styles.noImg} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`}>
         <BusinessInfo data={{ businessInfo: businessInfo[0] }} />
       </div>
